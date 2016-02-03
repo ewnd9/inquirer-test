@@ -1,6 +1,6 @@
 {
   "name": "inquirer-test",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "intergration testing for inquirer.js",
   "main": "index.js",
   "scripts": {
