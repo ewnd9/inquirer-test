@@ -1,7 +1,7 @@
 {
   "name": "inquirer-test",
   "version": "1.0.0",
-  "description": "intergration testing for inquirer.js",
+  "description": "functional testing for inquirer.js",
   "main": "index.js",
   "scripts": {
     "start": "node cli.js",

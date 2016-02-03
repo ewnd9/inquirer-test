@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/ewnd9/inquirer-test.svg?branch=master)](https://travis-ci.org/ewnd9/inquirer-test)
 
-Integration testing for [inquirer.js](http://npmjs.com/package/inquirer)
+Functional testing for [inquirer.js](http://npmjs.com/package/inquirer)
 
 ## Install
 
