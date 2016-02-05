@@ -2,7 +2,7 @@ global.Promise = require('pinkie-promise');
 
 var spawn = require('child_process').spawn;
 var concat = require('concat-stream');
-var timeout = process.version.indexOf('v0.10') === 0 ? 100 : 0;
+var timeout = 100;
 
 module.exports = function(cliPath, combo) {
   var proc = spawn('node', [cliPath], { stdio: [null, null, null] });
