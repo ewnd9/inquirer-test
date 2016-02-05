@@ -55,6 +55,11 @@ test('press press up, press down, press enter', async t => {
   const result = await(run(cliPath, [UP, DOWN, ENTER]));
   t.regexTest(new RegExp('TEST-1', 'g'), result);
 });
+
+test('run with data input', async t => {
+  const result = await(run(cliPath, ['input-1', ENTER, 'input-2', ENTER]));
+  t.regexTest(new RegExp("username: 'input-1', password: 'input-2'", 'g'), result);
+});
 ```
 
 ## License
