@@ -2,9 +2,12 @@ global.Promise = require('pinkie-promise');
 
 var spawn = require('child_process').spawn;
 var concat = require('concat-stream');
-var timeout = 100;
 
-module.exports = function(cliPath, combo) {
+module.exports = function(cliPath, combo, timeout) {
+  if (!timeout) {
+    timeout = 200;
+  }
+  
   var proc = spawn('node', [cliPath], { stdio: [null, null, null] });
   proc.stdin.setEncoding('utf-8');
 
