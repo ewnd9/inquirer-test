@@ -62,6 +62,8 @@ test('run with data input', async t => {
 });
 ```
 
+## Related
+
 - [inquirer](https://github.com/sboudrias/Inquirer.js)
 - [inquirer-bluebird](https://github.com/ewnd9/inquirer-bluebird)
 - [inquirer-question](https://github.com/ewnd9/inquirer-question)
