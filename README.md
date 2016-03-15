@@ -15,8 +15,8 @@ $ npm install inquirer-test --save-dev
 ```js
 // cli.js
 
-var inquirer = require('inquirer');
-var outputs = ['TEST-1', 'TEST-2', 'TEST-3'];
+const inquirer = require('inquirer');
+const outputs = ['TEST-1', 'TEST-2', 'TEST-3'];
 
 inquirer.prompt({
   type: 'list',
@@ -38,29 +38,35 @@ const cliPath = __dirname + '/cli.js';
 
 test('press enter', async t => {
   const result = await(run(cliPath, [ENTER]));
-  t.regexTest(new RegExp('TEST-1', 'g'), result);
+  t.regex(result, new RegExp('TEST-1', 'g'));
 });
 
 test('press down, press enter', async t => {
   const result = await(run(cliPath, [DOWN, ENTER]));
-  t.regexTest(new RegExp('TEST-2', 'g'), result);
+  t.regex(result, new RegExp('TEST-2', 'g'));
 });
 
 test('press up, press enter', async t => {
   const result = await(run(cliPath, [UP, ENTER]));
-  t.regexTest(new RegExp('TEST-3', 'g'), result);
+  t.regex(result, new RegExp('TEST-3', 'g'));
 });
 
 test('press press up, press down, press enter', async t => {
   const result = await(run(cliPath, [UP, DOWN, ENTER]));
-  t.regexTest(new RegExp('TEST-1', 'g'), result);
+  t.regex(result, new RegExp('TEST-1', 'g'));
 });
 
 test('run with data input', async t => {
   const result = await(run(cliPath, ['input-1', ENTER, 'input-2', ENTER]));
-  t.regexTest(new RegExp("username: 'input-1', password: 'input-2'", 'g'), result);
+  t.regex(result, new RegExp("username: 'input-1', password: 'input-2'", 'g'));
 });
 ```
+
+- [inquirer](https://github.com/sboudrias/Inquirer.js)
+- [inquirer-bluebird](https://github.com/ewnd9/inquirer-bluebird)
+- [inquirer-question](https://github.com/ewnd9/inquirer-question)
+- [inquirer-credentials](https://github.com/ewnd9/inquirer-credentials)
+- [inquirer-menu](https://github.com/ewnd9/inquirer-menu)
 
 ## License
 
