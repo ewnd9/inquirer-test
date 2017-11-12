@@ -19,8 +19,7 @@
   "author": "ewnd9 <ewndnine@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "concat-stream": "^1.5.1",
-    "pinkie-promise": "^2.0.0"
+    "concat-stream": "^1.5.1"
   },
   "devDependencies": {
     "ava": "^0.13.0",
