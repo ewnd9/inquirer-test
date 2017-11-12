@@ -3,12 +3,12 @@
 var spawn = require('child_process').spawn;
 var concat = require('concat-stream');
 
-module.exports = function(cliPath, combo, timeout) {
+module.exports = function(args, combo, timeout) {
   if (!timeout) {
     timeout = 200;
   }
 
-  var proc = spawn('node', [cliPath], { stdio: [null, null, null] });
+  var proc = spawn('node', args, { stdio: [null, null, null] });
   proc.stdin.setEncoding('utf-8');
 
   var loop = function(combo) {
