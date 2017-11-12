@@ -28,7 +28,7 @@ inquirer.prompt({
   name: 'q',
   message: 'hi',
   choices: [ '1', '2', '3' ]
-}, function(answers) {
+}).then(function(answers) {
   console.log(outputs[+answers.q - 1]);
 });
 ```
@@ -66,6 +66,12 @@ test('run with data input', async t => {
   t.regex(result, new RegExp("username: 'input-1', password: 'input-2'", 'g'));
 });
 ```
+
+## Changelog
+
+- `v2.0.0`
+  - change cliPath to `child_process` arguments array
+  - update to `inquirer@4`
 
 ## Related
 

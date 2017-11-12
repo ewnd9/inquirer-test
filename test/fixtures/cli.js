@@ -6,6 +6,6 @@ inquirer.prompt({
   name: 'q',
   message: 'hi',
   choices: [ '1', '2', '3' ]
-}, function(answers) {
+}).then(function(answers) {
   console.log(outputs[+answers.q - 1]);
 });
