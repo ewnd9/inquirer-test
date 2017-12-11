@@ -4,9 +4,9 @@
 
 Functional testing for [inquirer.js](http://npmjs.com/package/inquirer)
 
-> Could be use to test output of commands with regexs or side effects from running a script.
+> Could be used to test output of commands with regexps or side effects from running a script.
 >
-> E.g. with project generators you provide a combinations of control keys and text inputs and ensure
+> E.g. with project generators you provide combinations of control keys and text inputs and ensure
 > that files are generated with `fs` or other modules.
 
 ## Install
