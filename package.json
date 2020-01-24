@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node cli.js",
-    "test": "ava --serial --verbose test/test-ava.js && mocha test/test-mocha.js"
+    "test": "ava --serial --verbose test/test-ava.js && mocha test/test-mocha.js && jest"
   },
   "engines": {
     "node": ">=6.0"
@@ -25,9 +25,11 @@
     "concat-stream": "^1.5.1"
   },
   "devDependencies": {
+    "@types/jest": "^24.9.1",
     "ava": "^0.23.0",
     "chai": "^4.1.2",
     "inquirer": "^4.0.0",
+    "jest": "^25.1.0",
     "mocha": "^4.0.1"
   }
 }
